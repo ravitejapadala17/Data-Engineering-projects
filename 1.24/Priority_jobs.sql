@@ -1,5 +1,5 @@
-ATTACH IF NOT EXISTS 'data_jobs.duckdb' AS data_jobs;
-ATTACH IF NOT EXISTS 'job_mart.duckdb' AS job_mart;
+ATTACH IF NOT EXISTS 'DataBase\data_jobs.duckdb' AS data_jobs;
+ATTACH IF NOT EXISTS 'DataBase\job_mart.duckdb' AS job_mart;
 CREATE OR REPLACE TABLE job_mart.stagging.Priority_jobs (
     role_id INTEGER PRIMARY KEY,
     prefered_role VARCHAR,
