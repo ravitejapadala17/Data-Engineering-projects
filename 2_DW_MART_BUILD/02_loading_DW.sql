@@ -1,5 +1,5 @@
 
---Step 2: DW — Load data from CSV files into tables
+--Step 2: DW Load data from CSV files into tables
 -- Inserting the company dim data
 SELECT '*** Loading company dim data ***' AS Info;
 INSERT INTO company_dim(company_id,name)
