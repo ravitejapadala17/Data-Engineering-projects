@@ -1,22 +1,22 @@
 -- Step 1: DW - Creating Star schema tables
-/*
+-- /*
 DROP TABLE IF EXISTS job_postings_fact;
 DROP TABLE IF EXISTS skills_job_dim;
 DROP TABLE IF EXISTS company_dim;
 DROP TABLE IF EXISTS skills_dim;
-*/
-CREATE TABLE IF NOT EXISTS company_dim(
+-- */
+CREATE TABLE company_dim(
     company_id              INTEGER     PRIMARY KEY,
     name                    VARCHAR,
 );
 
-CREATE TABLE IF NOT EXISTS skills_dim(
+CREATE TABLE skills_dim(
     skill_id                INTEGER     PRIMARY KEY,
     skill                   VARCHAR,
     type                    VARCHAR
 );
 
-CREATE TABLE IF NOT EXISTS job_postings_fact(
+CREATE TABLE job_postings_fact(
     job_id                  INTEGER     PRIMARY KEY,
     company_id              INTEGER,
     job_title_short         VARCHAR,
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS job_postings_fact(
     FOREIGN KEY(company_id) REFERENCES company_dim(company_id)
 );
 
-CREATE TABLE IF NOT EXISTS skills_job_dim (
+CREATE TABLE skills_job_dim (
     skill_id                INTEGER,
     job_id                  INTEGER,
     PRIMARY KEY(skill_id, job_id),
