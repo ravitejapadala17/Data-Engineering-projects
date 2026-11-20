@@ -1,7 +1,7 @@
 -- Step 1: DW - Creating Star schema tables
 -- /*
-DROP TABLE IF EXISTS job_postings_fact;
 DROP TABLE IF EXISTS skills_job_dim;
+DROP TABLE IF EXISTS job_postings_fact;
 DROP TABLE IF EXISTS company_dim;
 DROP TABLE IF EXISTS skills_dim;
 -- */
@@ -12,7 +12,7 @@ CREATE TABLE company_dim(
 
 CREATE TABLE skills_dim(
     skill_id                INTEGER     PRIMARY KEY,
-    skill                   VARCHAR,
+    skills                   VARCHAR,
     type                    VARCHAR
 );
 
